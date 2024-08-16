@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+        name = Maximilian Kürschner
+        email = mail@programonaut.com
+[init]
+        defaultBranch = main

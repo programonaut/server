@@ -1,0 +1,16 @@
+packages:
+  omz:
+    standard:
+      - git
+    custom:
+      - zsh-syntax-highlighting
+      - zsh-autosuggestions
+  apt:
+    - git
+    - zsh
+    - curl
+    - wget
+    - rsync
+    - build-essential
+  npm:
+    - "@bitwarden/cli"

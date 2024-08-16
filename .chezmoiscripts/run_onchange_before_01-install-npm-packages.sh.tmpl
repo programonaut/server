@@ -1,0 +1,7 @@
+#!{{ lookPath "sh" }}
+
+echo "Install NPM packages"
+
+{{ range .packages.npm -}}
+pnpm install -g {{ . | quote }}
+{{ end -}}
