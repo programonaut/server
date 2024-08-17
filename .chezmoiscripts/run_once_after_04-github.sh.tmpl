@@ -4,12 +4,7 @@ echo "Login to GitHub"
 
 mkdir -p ~/.ssh
 
-echo "Login to Bitwarden Server ${BITWARDEN_SERVER} with email ${BITWARDEN_EMAIL}"
-bw config server ${BITWARDEN_SERVER}
-export BW_SESSION=$(bw login ${BITWARDEN_EMAIL} --raw)
 export BW_SESSION=$(bw unlock --raw)
-
-bw sync
 
 echo "Setup SSH key"
 echo "{{ bitwardenAttachmentByRef "id_ed25519" "item" "9ed77cc0-aefa-4a09-9dac-b1b3010d4421"}}" > ~/.ssh/id_ed25519
