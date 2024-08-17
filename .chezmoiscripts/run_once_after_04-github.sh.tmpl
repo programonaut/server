@@ -4,6 +4,7 @@ echo "Login to GitHub"
 
 mkdir -p ~/.ssh
 
+echo "Login to Bitwarden Server ${BITWARDEN_SERVER} with email ${BITWARDEN_EMAIL}"
 bw config server ${BITWARDEN_SERVER}
 export BW_SESSION=$(bw login ${BITWARDEN_EMAIL} --raw)
 export BW_SESSION=$(bw unlock --raw)
