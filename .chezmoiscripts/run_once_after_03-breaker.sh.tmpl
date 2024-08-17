@@ -1,14 +1,14 @@
 #!{{ lookPath "zsh" }}
 
-echo "Reload shell"
-echo "Run:"
-echo "zsh"
-echo "pnpm setup"
-echo "source ~/.zshrc"
-echo "omz reload | true"
-echo "source ~/bitwarden.sh"
 
 if [[ $BW_SESSION == "" ]]
 then
+    echo "Reload shell"
+    echo "Run:"
+    echo "zsh"
+    echo "pnpm setup"
+    echo "source ~/.zshrc"
+    echo "omz reload | true"
+    echo "source ~/bitwarden.sh"
     exit 1
 fi
