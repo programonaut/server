@@ -1,0 +1,10 @@
+#!{{ lookPath "sh" }}
+
+echo "Install APT packages"
+
+{{ range .packages.apt -}}
+sudo apt install {{ . | quote }}
+{{ end -}}
+{{ range .packages.snap -}}
+sudo snap install {{ . | quote }}
+{{ end -}}
