@@ -15,4 +15,3 @@ packages:
   snapclassic:
     - chezmoi
   npm:
-    - "@bitwarden/cli"
