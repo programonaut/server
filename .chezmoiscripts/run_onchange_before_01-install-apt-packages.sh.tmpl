@@ -3,8 +3,8 @@
 echo "Install APT packages"
 
 {{ range .packages.apt -}}
-sudo apt install {{ . | quote }}
+sudo apt install {{ . | quote }} -y
 {{ end -}}
-{{ range .packages.snap -}}
-sudo snap install {{ . | quote }}
+{{ range .packages.snap-classic -}}
+sudo snap install {{ . | quote }} --classic
 {{ end -}}
