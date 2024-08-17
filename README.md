@@ -1,11 +1,6 @@
 # Initial setup
 
-First install chezmoi using:
+Run:
 ```
-apt install chezmoi
-```
-
-Then run:
-```
-chezmoi init https://github.com/programonaut/server.git --apply
+sh -c "$(curl -fsLS get.chezmoi.io)" --  init https://github.com/programonaut/server.git --apply
 ```
