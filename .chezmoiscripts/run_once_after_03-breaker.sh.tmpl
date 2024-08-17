@@ -7,4 +7,8 @@ echo "pnpm setup"
 echo "source ~/.zshrc"
 echo "omz reload | true"
 echo "source ~/bitwarden.sh"
-exit 1
+
+if [[ $BW_SESSION == "" ]]
+then
+    exit 1
+fi
