@@ -5,6 +5,6 @@ echo "Install APT packages"
 {{ range .packages.apt -}}
 sudo apt install {{ . | quote }} -y
 {{ end -}}
-{{ range .packages.snap-classic -}}
+{{ range .packages.snapclassic -}}
 sudo snap install {{ . | quote }} --classic
 {{ end -}}

@@ -12,7 +12,7 @@ packages:
     - wget
     - rsync
     - build-essential
-  snap-classic:
+  snapclassic:
     - chezmoi
   npm:
     - "@bitwarden/cli"
