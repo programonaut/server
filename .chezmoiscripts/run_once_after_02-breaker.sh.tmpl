@@ -5,6 +5,8 @@ then
     echo "Reload shell"
     echo "Run:"
     echo "zsh"
+    echo "sudo chsh -s $(which zsh)"
+    echo "sudo chsh -s $(which zsh) $USER"
     echo "source ~/bitwarden.sh"
     echo "chezmoi apply"
     exit 1

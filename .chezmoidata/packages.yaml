@@ -2,6 +2,9 @@ packages:
   omz:
     standard:
       - git
+      - sudo
+      - docker
+      - docker-compose
     custom:
       - zsh-syntax-highlighting
       - zsh-autosuggestions
