@@ -1,3 +1,5 @@
+#!/bin/bash
+
 read -p "Enter your bitwarden server [bitwarden.com]: " BITWARDEN_SERVER
 BITWARDEN_SERVER=${BITWARDEN_SERVER:-bitwarden.com}
 
