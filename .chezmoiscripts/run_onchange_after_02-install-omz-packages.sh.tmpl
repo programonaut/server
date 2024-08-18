@@ -1,8 +1,5 @@
 #!{{ lookPath "sh" }}
 
-echo "Install omz"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 {{ range .packages.omz.custom -}}
 echo "Installing {{.}}"
 folder="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/{{.}}"
