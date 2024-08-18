@@ -1,15 +1,20 @@
-if [[ echo $0 | sed "s/-//g" -ne "bash" ]]
-then
-    read "BITWARDEN_SERVER?Enter your bitwarden server [bitwarden.com]: "
-    BITWARDEN_SERVER=${BITWARDEN_SERVER:-bitwarden.com}
+TMP=$(echo $0 | sed "s/-//g")
+echo "Current shell: $TMP"
 
-    read "BITWARDEN_EMAIL?Enter your email: "
-    BITWARDEN_EMAIL=${BITWARDEN_EMAIL}
-else
+if [[ $(echo $0 | sed "s/-//g") == "bash" ]]
+then
+    echo "bash"
     read -p "Enter your bitwarden server [bitwarden.com]: " BITWARDEN_SERVER
     BITWARDEN_SERVER=${BITWARDEN_SERVER:-bitwarden.com}
 
     read -p "Enter your email: " BITWARDEN_EMAIL
+    BITWARDEN_EMAIL=${BITWARDEN_EMAIL}
+else
+    echo "zsh"
+    read "BITWARDEN_SERVER?Enter your bitwarden server [bitwarden.com]: "
+    BITWARDEN_SERVER=${BITWARDEN_SERVER:-bitwarden.com}
+
+    read "BITWARDEN_EMAIL?Enter your email: "
     BITWARDEN_EMAIL=${BITWARDEN_EMAIL}
 fi
 
