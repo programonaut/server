@@ -120,6 +120,11 @@ source $ZSH/oh-my-zsh.sh
 # Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PNPM_HOME="/home/max/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # Chezmoi stuff
 export CHEZMOI_REPO="~/.local/share/chezmoi"
 export PATH="~/.scripts:$PATH"
