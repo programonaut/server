@@ -1,7 +1,7 @@
 #!{{ lookPath "zsh" }}
 
 
-if [[ $BW_SESSION == "" ]]
+if [[ -z ${$BW_SESSION} ]]
 then
     exit 1
 else
