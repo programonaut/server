@@ -1,10 +1,7 @@
-#!{{ lookPath "zsh" }}
+#!{{ lookPath "bash" }}
 
-
-if [[ -z ${$BW_SESSION} ]]
+if [[ $BW_SESSION == "" ]]
 then
-    exit 1
-else
     echo "Reload shell"
     echo "Run:"
     echo "zsh"
@@ -12,4 +9,5 @@ else
     echo "source ~/.zshrc"
     echo "omz reload | true"
     echo "source ~/bitwarden.sh"
+    exit 1
 fi
