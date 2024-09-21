@@ -26,3 +26,6 @@ newgrp docker
 # Start Docker on boot
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+
+export CR_PAT="{{ (bitwarden "item" "47b30ce6-2d98-4f06-b588-b1bb00fc14bc").login.password }}"
+echo $CR_PAT | docker login ghcr.io -u programonaut --password-stdin
